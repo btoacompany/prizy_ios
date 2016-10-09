@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69AE10F31DAA7089001E31DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F21DAA7089001E31DD /* Assets.xcassets */; };
+		69AE10F61DAA709E001E31DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F41DAA709E001E31DD /* LaunchScreen.storyboard */; };
+		69AE10F71DAA709E001E31DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F51DAA709E001E31DD /* Main.storyboard */; };
+		69AE10FA1DAA70C5001E31DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE10F81DAA70C5001E31DD /* LoginViewController.swift */; };
+		69AE10FB1DAA70C5001E31DD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE10F91DAA70C5001E31DD /* WebViewController.swift */; };
 		69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */; };
-		69FCD2BE1DA9E2490020B1F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */; };
-		69FCD2C11DA9E2490020B1F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */; };
-		69FCD2C31DA9E2490020B1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */; };
-		69FCD2C61DA9E2490020B1F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */; };
 		69FCD2D11DA9E2490020B1F1 /* prizy_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2D01DA9E2490020B1F1 /* prizy_meTests.swift */; };
 		69FCD2DC1DA9E2490020B1F1 /* prizy_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2DB1DA9E2490020B1F1 /* prizy_meUITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69AE10F21DAA7089001E31DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		69AE10F41DAA709E001E31DD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/Views/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69AE10F51DAA709E001E31DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Views/Main.storyboard; sourceTree = "<group>"; };
+		69AE10F81DAA70C5001E31DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		69AE10F91DAA70C5001E31DD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ViewControllers/WebViewController.swift; sourceTree = "<group>"; };
 		69FCD2B81DA9E2490020B1F1 /* prizy.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prizy.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		69FCD2C01DA9E2490020B1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69FCD2C51DA9E2490020B1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69FCD2C71DA9E2490020B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69FCD2CC1DA9E2490020B1F1 /* prizy.meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prizy.meTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FCD2D01DA9E2490020B1F1 /* prizy_meTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prizy_meTests.swift; sourceTree = "<group>"; };
@@ -97,11 +99,9 @@
 		69FCD2BA1DA9E2490020B1F1 /* prizy.me */ = {
 			isa = PBXGroup;
 			children = (
+				69FCD2EA1DAA60470020B1F1 /* Resources */,
+				69FCD2E91DAA60350020B1F1 /* ViewControllers */,
 				69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */,
-				69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */,
-				69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */,
-				69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */,
-				69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */,
 				69FCD2C71DA9E2490020B1F1 /* Info.plist */,
 			);
 			path = prizy.me;
@@ -123,6 +123,33 @@
 				69FCD2DD1DA9E2490020B1F1 /* Info.plist */,
 			);
 			path = prizy.meUITests;
+			sourceTree = "<group>";
+		};
+		69FCD2E91DAA60350020B1F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				69AE10F81DAA70C5001E31DD /* LoginViewController.swift */,
+				69AE10F91DAA70C5001E31DD /* WebViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		69FCD2EA1DAA60470020B1F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69AE10F21DAA7089001E31DD /* Assets.xcassets */,
+				69FCD2EC1DAA606C0020B1F1 /* Views */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		69FCD2EC1DAA606C0020B1F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69AE10F41DAA709E001E31DD /* LaunchScreen.storyboard */,
+				69AE10F51DAA709E001E31DD /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FCD2C61DA9E2490020B1F1 /* LaunchScreen.storyboard in Resources */,
-				69FCD2C31DA9E2490020B1F1 /* Assets.xcassets in Resources */,
-				69FCD2C11DA9E2490020B1F1 /* Main.storyboard in Resources */,
+				69AE10F71DAA709E001E31DD /* Main.storyboard in Resources */,
+				69AE10F31DAA7089001E31DD /* Assets.xcassets in Resources */,
+				69AE10F61DAA709E001E31DD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FCD2BE1DA9E2490020B1F1 /* ViewController.swift in Sources */,
+				69AE10FA1DAA70C5001E31DD /* LoginViewController.swift in Sources */,
+				69AE10FB1DAA70C5001E31DD /* WebViewController.swift in Sources */,
 				69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,25 +325,6 @@
 			targetProxy = 69FCD2D81DA9E2490020B1F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				69FCD2C01DA9E2490020B1F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				69FCD2C51DA9E2490020B1F1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		69FCD2DE1DA9E2490020B1F1 /* Debug */ = {
@@ -415,9 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 5BPE2P4V6W;
 				INFOPLIST_FILE = prizy.me/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,9 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 5BPE2P4V6W;
 				INFOPLIST_FILE = prizy.me/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +525,7 @@
 				69FCD2E21DA9E2490020B1F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69FCD2E31DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +534,7 @@
 				69FCD2E51DA9E2490020B1F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69FCD2E61DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +543,7 @@
 				69FCD2E81DA9E2490020B1F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
