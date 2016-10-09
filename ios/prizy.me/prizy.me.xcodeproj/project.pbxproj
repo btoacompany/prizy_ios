@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */; };
+		69FCD2BE1DA9E2490020B1F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */; };
+		69FCD2C11DA9E2490020B1F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */; };
+		69FCD2C31DA9E2490020B1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */; };
+		69FCD2C61DA9E2490020B1F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */; };
+		69FCD2D11DA9E2490020B1F1 /* prizy_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2D01DA9E2490020B1F1 /* prizy_meTests.swift */; };
+		69FCD2DC1DA9E2490020B1F1 /* prizy_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FCD2DB1DA9E2490020B1F1 /* prizy_meUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69FCD2CD1DA9E2490020B1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69FCD2B01DA9E2490020B1F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69FCD2B71DA9E2490020B1F1;
+			remoteInfo = prizy.me;
+		};
+		69FCD2D81DA9E2490020B1F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69FCD2B01DA9E2490020B1F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69FCD2B71DA9E2490020B1F1;
+			remoteInfo = prizy.me;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69FCD2B81DA9E2490020B1F1 /* prizy.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prizy.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69FCD2C01DA9E2490020B1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69FCD2C51DA9E2490020B1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69FCD2C71DA9E2490020B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69FCD2CC1DA9E2490020B1F1 /* prizy.meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prizy.meTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69FCD2D01DA9E2490020B1F1 /* prizy_meTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prizy_meTests.swift; sourceTree = "<group>"; };
+		69FCD2D21DA9E2490020B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69FCD2D71DA9E2490020B1F1 /* prizy.meUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prizy.meUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69FCD2DB1DA9E2490020B1F1 /* prizy_meUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prizy_meUITests.swift; sourceTree = "<group>"; };
+		69FCD2DD1DA9E2490020B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69FCD2B51DA9E2490020B1F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2C91DA9E2490020B1F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2D41DA9E2490020B1F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69FCD2AF1DA9E2490020B1F1 = {
+			isa = PBXGroup;
+			children = (
+				69FCD2BA1DA9E2490020B1F1 /* prizy.me */,
+				69FCD2CF1DA9E2490020B1F1 /* prizy.meTests */,
+				69FCD2DA1DA9E2490020B1F1 /* prizy.meUITests */,
+				69FCD2B91DA9E2490020B1F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69FCD2B91DA9E2490020B1F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69FCD2B81DA9E2490020B1F1 /* prizy.me.app */,
+				69FCD2CC1DA9E2490020B1F1 /* prizy.meTests.xctest */,
+				69FCD2D71DA9E2490020B1F1 /* prizy.meUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69FCD2BA1DA9E2490020B1F1 /* prizy.me */ = {
+			isa = PBXGroup;
+			children = (
+				69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */,
+				69FCD2BD1DA9E2490020B1F1 /* ViewController.swift */,
+				69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */,
+				69FCD2C21DA9E2490020B1F1 /* Assets.xcassets */,
+				69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */,
+				69FCD2C71DA9E2490020B1F1 /* Info.plist */,
+			);
+			path = prizy.me;
+			sourceTree = "<group>";
+		};
+		69FCD2CF1DA9E2490020B1F1 /* prizy.meTests */ = {
+			isa = PBXGroup;
+			children = (
+				69FCD2D01DA9E2490020B1F1 /* prizy_meTests.swift */,
+				69FCD2D21DA9E2490020B1F1 /* Info.plist */,
+			);
+			path = prizy.meTests;
+			sourceTree = "<group>";
+		};
+		69FCD2DA1DA9E2490020B1F1 /* prizy.meUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69FCD2DB1DA9E2490020B1F1 /* prizy_meUITests.swift */,
+				69FCD2DD1DA9E2490020B1F1 /* Info.plist */,
+			);
+			path = prizy.meUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69FCD2B71DA9E2490020B1F1 /* prizy.me */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69FCD2E01DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.me" */;
+			buildPhases = (
+				69FCD2B41DA9E2490020B1F1 /* Sources */,
+				69FCD2B51DA9E2490020B1F1 /* Frameworks */,
+				69FCD2B61DA9E2490020B1F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = prizy.me;
+			productName = prizy.me;
+			productReference = 69FCD2B81DA9E2490020B1F1 /* prizy.me.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69FCD2CB1DA9E2490020B1F1 /* prizy.meTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69FCD2E31DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meTests" */;
+			buildPhases = (
+				69FCD2C81DA9E2490020B1F1 /* Sources */,
+				69FCD2C91DA9E2490020B1F1 /* Frameworks */,
+				69FCD2CA1DA9E2490020B1F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69FCD2CE1DA9E2490020B1F1 /* PBXTargetDependency */,
+			);
+			name = prizy.meTests;
+			productName = prizy.meTests;
+			productReference = 69FCD2CC1DA9E2490020B1F1 /* prizy.meTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69FCD2D61DA9E2490020B1F1 /* prizy.meUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69FCD2E61DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meUITests" */;
+			buildPhases = (
+				69FCD2D31DA9E2490020B1F1 /* Sources */,
+				69FCD2D41DA9E2490020B1F1 /* Frameworks */,
+				69FCD2D51DA9E2490020B1F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69FCD2D91DA9E2490020B1F1 /* PBXTargetDependency */,
+			);
+			name = prizy.meUITests;
+			productName = prizy.meUITests;
+			productReference = 69FCD2D71DA9E2490020B1F1 /* prizy.meUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69FCD2B01DA9E2490020B1F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jay Rinaldi Fatalla";
+				TargetAttributes = {
+					69FCD2B71DA9E2490020B1F1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5BPE2P4V6W;
+						ProvisioningStyle = Automatic;
+					};
+					69FCD2CB1DA9E2490020B1F1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5BPE2P4V6W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69FCD2B71DA9E2490020B1F1;
+					};
+					69FCD2D61DA9E2490020B1F1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5BPE2P4V6W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69FCD2B71DA9E2490020B1F1;
+					};
+				};
+			};
+			buildConfigurationList = 69FCD2B31DA9E2490020B1F1 /* Build configuration list for PBXProject "prizy.me" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69FCD2AF1DA9E2490020B1F1;
+			productRefGroup = 69FCD2B91DA9E2490020B1F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69FCD2B71DA9E2490020B1F1 /* prizy.me */,
+				69FCD2CB1DA9E2490020B1F1 /* prizy.meTests */,
+				69FCD2D61DA9E2490020B1F1 /* prizy.meUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69FCD2B61DA9E2490020B1F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FCD2C61DA9E2490020B1F1 /* LaunchScreen.storyboard in Resources */,
+				69FCD2C31DA9E2490020B1F1 /* Assets.xcassets in Resources */,
+				69FCD2C11DA9E2490020B1F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2CA1DA9E2490020B1F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2D51DA9E2490020B1F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69FCD2B41DA9E2490020B1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FCD2BE1DA9E2490020B1F1 /* ViewController.swift in Sources */,
+				69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2C81DA9E2490020B1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FCD2D11DA9E2490020B1F1 /* prizy_meTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69FCD2D31DA9E2490020B1F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69FCD2DC1DA9E2490020B1F1 /* prizy_meUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69FCD2CE1DA9E2490020B1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69FCD2B71DA9E2490020B1F1 /* prizy.me */;
+			targetProxy = 69FCD2CD1DA9E2490020B1F1 /* PBXContainerItemProxy */;
+		};
+		69FCD2D91DA9E2490020B1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69FCD2B71DA9E2490020B1F1 /* prizy.me */;
+			targetProxy = 69FCD2D81DA9E2490020B1F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69FCD2BF1DA9E2490020B1F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69FCD2C01DA9E2490020B1F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69FCD2C41DA9E2490020B1F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69FCD2C51DA9E2490020B1F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69FCD2DE1DA9E2490020B1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69FCD2DF1DA9E2490020B1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69FCD2E11DA9E2490020B1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.me/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		69FCD2E21DA9E2490020B1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.me/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		69FCD2E41DA9E2490020B1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.meTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-meTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prizy.me.app/prizy.me";
+			};
+			name = Debug;
+		};
+		69FCD2E51DA9E2490020B1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.meTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-meTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prizy.me.app/prizy.me";
+			};
+			name = Release;
+		};
+		69FCD2E71DA9E2490020B1F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.meUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-meUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = prizy.me;
+			};
+			name = Debug;
+		};
+		69FCD2E81DA9E2490020B1F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				INFOPLIST_FILE = prizy.meUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-meUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = prizy.me;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69FCD2B31DA9E2490020B1F1 /* Build configuration list for PBXProject "prizy.me" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69FCD2DE1DA9E2490020B1F1 /* Debug */,
+				69FCD2DF1DA9E2490020B1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69FCD2E01DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.me" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69FCD2E11DA9E2490020B1F1 /* Debug */,
+				69FCD2E21DA9E2490020B1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69FCD2E31DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69FCD2E41DA9E2490020B1F1 /* Debug */,
+				69FCD2E51DA9E2490020B1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69FCD2E61DA9E2490020B1F1 /* Build configuration list for PBXNativeTarget "prizy.meUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69FCD2E71DA9E2490020B1F1 /* Debug */,
+				69FCD2E81DA9E2490020B1F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69FCD2B01DA9E2490020B1F1 /* Project object */;
+}
