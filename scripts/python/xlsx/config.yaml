@@ -1,0 +1,19 @@
+- input:
+    xlsx: ../../../resources/wording.xlsx
+    sheet: Wording
+    start_row: 2
+    mapping:
+      ENGLISH : EN
+      JAPANESE : JA
+      ID: ID
+
+  output:
+    iOS_Header: ../../../ios/prizy.me/prizy.me/Constants/Wording.swift
+
+    iOS_SINGLE:
+      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/word.strings
+      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/word.strings
+
+    iOS_PLURAL:
+      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/word.plist
+      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/word.plist

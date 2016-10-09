@@ -1,3 +1,6 @@
 ios/prizy.me/prizy.me.xcodeproj/project.xcworkspace
 ios/prizy.me/prizy.me.xcodeproj/xcuserdata
 *.numbers
+scripts/.idea
+scripts/python/.idea
+scripts/venv
