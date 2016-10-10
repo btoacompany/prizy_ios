@@ -4,6 +4,10 @@ import pprint
 import re
 import collections
 import sys
+from os.path import dirname
+parent = os.path.join(dirname(__file__),"../..")
+absParent = os.path.abspath(parent)
+sys.path.append(absParent)
 
 import yaml
 
@@ -70,7 +74,7 @@ if __name__ == '__main__':
     try:
         yamlPath = sys.argv[1]
     except:
-        yamlPath = "./config.yaml"
+        yamlPath = "./python/parser/config.yaml"
 
     with open(yamlPath, 'r', encoding='UTF-8') as reader:
         data = yaml.load(reader)

@@ -1,11 +1,11 @@
 segues:
   - prefix: SEGUE_
-    folder: ../../../ios/prizy.me/prizy.me/Resources/Views
-    output: ../../../ios/prizy.me/prizy.me/Constants/Segue.swift
+    folder: ../ios/prizy.me/prizy.me/Resources/Views
+    output: ../ios/prizy.me/prizy.me/Constants/Segue.swift
     enum: Segue
 
 plists:
   - prefix: PLIST_
-    folder: ../../../ios/prizy.me/prizy.me/Resources/plists
-    output: ../../../ios/prizy.me/prizy.me/Constants/plist.swift
+    folder: ../ios/prizy.me/prizy.me/Resources/plists
+    output: ../ios/prizy.me/prizy.me/Constants/plist.swift
     enum: Plist

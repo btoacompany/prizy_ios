@@ -1,7 +1,7 @@
 from contextlib import contextmanager
 import functools
 
-from python.pl import language
+from . import language
 
 @contextmanager
 def createObjectiveCFile(filePath,indentionChar="    ",newLine="\n"):

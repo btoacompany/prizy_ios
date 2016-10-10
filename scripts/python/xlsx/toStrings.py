@@ -5,8 +5,15 @@ import pprint
 import yaml
 import html
 
+from os.path import dirname
+parent = os.path.join(dirname(__file__),"../..")
+absParent = os.path.abspath(parent)
+sys.path.append(absParent)
+
+
 from python.wording import wlp
 from python.pl import swift
+
 def unicodeiOS(key,value):
     newValue = ""
     value = value.replace('\"','"')
@@ -45,7 +52,7 @@ if __name__ == "__main__":
     try:
         yamlPath = sys.argv[1]
     except:
-        yamlPath = "./config.yaml"
+        yamlPath = "./python/xlsx/config.yaml"
 
     with open(yamlPath, 'r', encoding='UTF-8') as reader:
         yamlList = yaml.load(reader)

@@ -1,5 +1,5 @@
 - input:
-    xlsx: ../../../resources/wording.xlsx
+    xlsx: ../resources/wording.xlsx
     sheet: Wording
     start_row: 2
     mapping:
@@ -8,12 +8,12 @@
       ID: ID
 
   output:
-    iOS_Header: ../../../ios/prizy.me/prizy.me/Constants/Wording.swift
+    iOS_Header: ../ios/prizy.me/prizy.me/Constants/Wording.swift
 
     iOS_SINGLE:
-      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en.lproj/Localizable.strings
-      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja.lproj/Localizable.strings
+      ENGLISH: ../ios/prizy.me/prizy.me/Resources/Localization/en.lproj/Localizable.strings
+      JAPANESE: ../ios/prizy.me/prizy.me/Resources/Localization/ja.lproj/Localizable.strings
 
     iOS_PLURAL:
-      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/Localizable.plist
-      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/Localizable.plist
+      ENGLISH: ../ios/prizy.me/prizy.me/Resources/Localization/en/Localizable.plist
+      JAPANESE: ../ios/prizy.me/prizy.me/Resources/Localization/ja/Localizable.plist

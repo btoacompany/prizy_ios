@@ -335,7 +335,7 @@ def createObJavaEnumClasssFromList(keys, filePath, packageName, project, inherit
         body = body.getvalue()
         writer.write(template.javaBodyTemplate.format(classNameValue,project,packageName,imports,className,body,"{","}"))
 
-def androidWriter(localizationObj,sheetName,localizationPathMap,addFormattedField=True,translateMapping={"'":"\\'","?€?":"&#8230;"},keyValueTransform=None):
+def androidWriter(localizationObj,sheetName,localizationPathMap,addFormattedField=True,translateMapping={"'":"\\'"},keyValueTransform=None):
 
     def transform(key,value):
         if keyValueTransform:
@@ -353,7 +353,7 @@ def androidWriter(localizationObj,sheetName,localizationPathMap,addFormattedFiel
     for language, filePath in localizationPathMap.items():
         writeToFile(localizationObj,sheetName,filePath,KEY,language,bodyTemplate,template.androidLineTemplate,transformFunc=transform)
 
-def androidReader(localizationPathMa,translateMapping={"\\'":"'","&#8230;":"?€?"}):
+def androidReader(localizationPathMa,translateMapping={"\\'":"'"}):
     localizationObj = OrderedDict()
     for currentLanguage,filePath in localizationPathMap.items():
         localizationObj =_parseAndroidXml(filePath,currentLanguage,localizationObj,translateMapping)
@@ -397,9 +397,3 @@ __writerMapping={
 
 def write(writerType,localizationObj,sheetName,localizationPathMap):
     return __writerMapping[writerType](localizationObj,sheetName,localizationPathMap)
-
-
-
-
-
-
