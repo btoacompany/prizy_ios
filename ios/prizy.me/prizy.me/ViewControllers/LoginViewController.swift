@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -26,6 +25,11 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         self.emailField.delegate = self;
         self.passwordField.delegate = self;
         
+        self.emailLabel.text = Localized(.WRD_EMAIL)
+        self.passwordLabel.text = Localized(.WRD_PASSWORD)
+        self.loginButton.setTitle(Localized(.WRD_LOGIN), for: .normal)
+        self.forgotButton.setTitle(Localized(.WRD_FORGOT_PASSWORD), for: .normal)
+        self.rememberLabel.text = Localized(.WRD_REMEMBER_ME)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

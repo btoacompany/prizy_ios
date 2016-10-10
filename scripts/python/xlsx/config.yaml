@@ -11,9 +11,9 @@
     iOS_Header: ../../../ios/prizy.me/prizy.me/Constants/Wording.swift
 
     iOS_SINGLE:
-      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/word.strings
-      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/word.strings
+      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en.lproj/Localization.strings
+      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja.lproj/Localization.strings
 
     iOS_PLURAL:
-      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/word.plist
-      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/word.plist
+      ENGLISH: ../../../ios/prizy.me/prizy.me/Resources/Localization/en/Localization.plist
+      JAPANESE: ../../../ios/prizy.me/prizy.me/Resources/Localization/ja/Localization.plist

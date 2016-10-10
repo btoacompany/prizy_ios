@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69801ACB1DAB98A200417291 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69801AC91DAB98A200417291 /* Localization.strings */; };
+		69801ACF1DAB9AB800417291 /* WordingAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69801ACE1DAB9AB800417291 /* WordingAddon.swift */; };
 		69AE10F31DAA7089001E31DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F21DAA7089001E31DD /* Assets.xcassets */; };
 		69AE10F61DAA709E001E31DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F41DAA709E001E31DD /* LaunchScreen.storyboard */; };
 		69AE10F71DAA709E001E31DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE10F51DAA709E001E31DD /* Main.storyboard */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69801ACA1DAB98A200417291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/Localization/en.lproj/Localization.strings; sourceTree = "<group>"; };
+		69801ACC1DAB991000417291 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/Localization/ja.lproj/Localization.strings; sourceTree = "<group>"; };
+		69801ACE1DAB9AB800417291 /* WordingAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordingAddon.swift; sourceTree = "<group>"; };
 		69AE10F21DAA7089001E31DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		69AE10F41DAA709E001E31DD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/Views/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69AE10F51DAA709E001E31DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Views/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +83,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69801AC81DAB989000417291 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				69801AC91DAB98A200417291 /* Localization.strings */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		69801ACD1DAB9AA100417291 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				69801ACE1DAB9AB800417291 /* WordingAddon.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		69AE10FC1DAAA221001E31DD /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +130,7 @@
 		69FCD2BA1DA9E2490020B1F1 /* prizy.me */ = {
 			isa = PBXGroup;
 			children = (
+				69801ACD1DAB9AA100417291 /* Helper */,
 				69AE10FC1DAAA221001E31DD /* Constants */,
 				69FCD2EA1DAA60470020B1F1 /* Resources */,
 				69FCD2E91DAA60350020B1F1 /* ViewControllers */,
@@ -148,6 +170,7 @@
 		69FCD2EA1DAA60470020B1F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				69801AC81DAB989000417291 /* Localization */,
 				69AE10F21DAA7089001E31DD /* Assets.xcassets */,
 				69FCD2EC1DAA606C0020B1F1 /* Views */,
 			);
@@ -231,7 +254,7 @@
 				TargetAttributes = {
 					69FCD2B71DA9E2490020B1F1 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5BPE2P4V6W;
+						DevelopmentTeam = Q9Y32TNFEQ;
 						ProvisioningStyle = Automatic;
 					};
 					69FCD2CB1DA9E2490020B1F1 = {
@@ -255,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 69FCD2AF1DA9E2490020B1F1;
 			productRefGroup = 69FCD2B91DA9E2490020B1F1 /* Products */;
@@ -274,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AE10F71DAA709E001E31DD /* Main.storyboard in Resources */,
+				69801ACB1DAB98A200417291 /* Localization.strings in Resources */,
 				69AE10F31DAA7089001E31DD /* Assets.xcassets in Resources */,
 				69AE10F61DAA709E001E31DD /* LaunchScreen.storyboard in Resources */,
 			);
@@ -301,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AE10FA1DAA70C5001E31DD /* LoginViewController.swift in Sources */,
+				69801ACF1DAB9AB800417291 /* WordingAddon.swift in Sources */,
 				69AE10FB1DAA70C5001E31DD /* WebViewController.swift in Sources */,
 				69AE11001DAAA295001E31DD /* Wording.swift in Sources */,
 				69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */,
@@ -338,11 +364,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		69801AC91DAB98A200417291 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69801ACA1DAB98A200417291 /* en */,
+				69801ACC1DAB991000417291 /* ja */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		69FCD2DE1DA9E2490020B1F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -357,6 +396,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -379,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -393,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -407,6 +448,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -423,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -436,11 +478,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				DEVELOPMENT_TEAM = Q9Y32TNFEQ;
 				INFOPLIST_FILE = prizy.me/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
+				PRODUCT_BUNDLE_IDENTIFIER = "btoa.prizy-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -450,11 +492,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5BPE2P4V6W;
+				DEVELOPMENT_TEAM = Q9Y32TNFEQ;
 				INFOPLIST_FILE = prizy.me/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jrf.prizy-me";
+				PRODUCT_BUNDLE_IDENTIFIER = "btoa.prizy-me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

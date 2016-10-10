@@ -1,0 +1,11 @@
+/*wording.xlsx*/
+/* THIS IS A GENERATED FILE , ANY CHANGES MADE TO THIS FILE WILL BE ERASED */
+"login" = "ログイン";
+"email" = "メールアドレス";
+"email_text_hint" = "";
+"password" = "パスワード";
+"password_text_hint" = "";
+"remember_me" = "ログイン状態を保持する";
+"forgot_password" = "パスワードを忘れましたか？";
+"logout" = "ログアウト";
+

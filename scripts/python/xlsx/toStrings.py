@@ -37,7 +37,7 @@ def createHeader(localizationObj,outputPath):
     keys.sort()
     with open(outputPath,"w", encoding="UTF-8") as writer:
         s = swift.Swift(writer)
-        values = zip(map(createKey,keys), keys)
+        values = zip(map(createKey,keys), map(s.doubleQoute,keys))
         s.enumeration("Wording",values,"String")
 
 

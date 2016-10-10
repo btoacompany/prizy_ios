@@ -1,0 +1,11 @@
+/*wording.xlsx*/
+/* THIS IS A GENERATED FILE , ANY CHANGES MADE TO THIS FILE WILL BE ERASED */
+"login" = "Login";
+"email" = "Email";
+"email_text_hint" = "";
+"password" = "Password";
+"password_text_hint" = "";
+"remember_me" = "Remember Me";
+"forgot_password" = "Forgot Password ?";
+"logout" = "Logout";
+
