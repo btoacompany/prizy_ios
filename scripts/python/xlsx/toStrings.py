@@ -4,6 +4,7 @@ import pprint
 
 import yaml
 import html
+import functools
 
 from os.path import dirname
 parent = os.path.join(dirname(__file__),"../..")
@@ -36,15 +37,16 @@ def unicodeiOS(key,value):
             newValue +=v"""
     return key,html.unescape(newValue)
 
-def createKey(key):
-    return "WRD_"+key.upper()
+def createKey(prefix, key):
+    return (prefix+key).upper()
 
-def createHeader(localizationObj,outputPath):
+def createHeader(localizationObj,outputPath,prefix):
     keys = list(localizationObj.keys())
     keys.sort()
     with open(outputPath,"w", encoding="UTF-8") as writer:
         s = swift.Swift(writer)
-        values = zip(map(createKey,keys), map(s.doubleQoute,keys))
+        prefixKey = functools.partial(createKey,prefix)
+        values = zip(map(prefixKey,keys), map(s.doubleQoute,keys))
         s.enumeration("Wording",values,"String")
 
 
@@ -72,7 +74,7 @@ if __name__ == "__main__":
         filename = os.path.basename(os.path.abspath(inputData["xlsx"]))
 
         wlp.iOSWriter(localizationObj, filename, iosMapping, keyValueTransform=unicodeiOS)
-        createHeader(localizationObj,output["iOS_Header"])
+        createHeader(localizationObj,output["iOS_Header"]["path"], output["iOS_Header"]["prefix"])
 
 
 

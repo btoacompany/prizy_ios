@@ -60,7 +60,7 @@ def processEntry(entry):
                     segueNames = getSegueFromStoryboard(os.path.join(currentDirectory,f),segueNames)
 
     uniqueFileNames= list(set(map(iOSBaseName, segueNames)))
-    preprocessorNames = map(preprocessorFormat,uniqueFileNames)
+    preprocessorNames = map(lambda x : preprocessorFormat(x,entry.prefix),uniqueFileNames)
 
     with open(entry.outputPath, "w", encoding="UTF-8") as writer:
         s = swift.Swift(writer)
