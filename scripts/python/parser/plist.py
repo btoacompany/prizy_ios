@@ -5,6 +5,7 @@ import sys
 import collections
 import functools
 import yaml
+import pprint
 from os.path import dirname
 parent = os.path.join(dirname(__file__),"../..")
 absParent = os.path.abspath(parent)
@@ -43,18 +44,21 @@ def preprocessorFormat(name, prefix = "PLIST_"):
 def processEntry(entry):
     fileNames = []
     for folder in entry.inputFolders :
-        for currentDirectory , subDirectories, files  in os.walk(os.path.abspath(folder)):
-            map(fileNames.append , files)
+        absFolder = os.path.abspath(folder)
+        print(absFolder)
+        for currentDirectory , subDirectories, files  in os.walk(absFolder):
+            list(map(fileNames.append , files))
 
     uniqueFileNames= list(set(map(iOSBaseName, fileNames)))
     uniqueFileNames.sort()
     if ".DS_Store" in uniqueFileNames:
         uniqueFileNames.remove(".DS_Store")
     formatter= functools.partial(preprocessorFormat, prefix = entry.prefix)
-    preprocessorNames = map(formatter,uniqueFileNames)
+    preprocessorNames = list(map(formatter,uniqueFileNames))
 
     with open(entry.outputPath, "w", encoding="UTF-8") as writer:
         s = swift.Swift(writer)
+        uniqueFileNames=list(map(s.doubleQoute,uniqueFileNames))
         values = zip(preprocessorNames, uniqueFileNames)
         s.enumeration(entry.enum, values, "String")
 

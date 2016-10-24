@@ -1,0 +1,31 @@
+input:
+  image:
+    path: "../Resources/original_images"
+    included_extension : 
+      - .PNG
+      - .png
+      - .JPG
+      - .jpg
+      - .TIFF
+      - .tiff
+  excel: 
+    path: "../Resources/images.xlsx"
+    sheet_name: "images"
+    header_line: 1
+    key_column_name: id
+    localization_column_mapping:
+      "filename": "filename"
+      "os": "os"
+      "rename": "rename"
+      "width": "width"
+      "height": "height"
+      "iosAttribute": "ios_attribute"
+      "androidAttribute": "android_attribute"
+      "id": "id"
+      "finalname": "final filename"
+output:
+  ios:
+    header:
+      path: "../ios/prizy.me/prizy.me/Constants/ImageConstants.swift"
+      prefix: "IMG_"
+    output: "../ios/prizy.me/prizy.me/Resources/Assets.xcassets"

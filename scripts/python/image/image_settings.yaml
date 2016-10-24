@@ -1,0 +1,456 @@
+ios_icon:
+  icon_1_3:
+    resize: 1/3
+    file_formats:
+      - "{0}.imageset/{0}~iphone{1}"
+
+  icon_2_3:
+    resize: 2/3
+    file_formats:
+      - "{0}.imageset/{0}@2x~iphone{1}"
+      - "{0}.imageset/{0}~ipad{1}"
+
+  original: 
+    resize: 1/1 
+    file_formats:
+      - "{0}.imageset/{0}@3x~iphone{1}"
+      - "{0}.imageset/{0}@2x~ipad{1}"
+
+ios_product_icon:
+  20:
+    exact_size: "20x20"
+    file_formats:
+      - "{0}.appiconset/{0}-20{1}"
+  29:
+    exact_size: "29x29"
+    file_formats:
+      - "{0}.appiconset/{0}-Small{1}"
+
+  40:
+    exact_size: "40x40"
+    file_formats:
+      - "{0}.appiconset/{0}-40{1}"
+      - "{0}.appiconset/{0}-20@2x{1}"
+  58:
+    exact_size: "58x58"
+    file_formats: 
+      - "{0}.appiconset/{0}-Small@2x{1}"
+  60:
+    exact_size: "60x60"
+    file_formats:
+      - "{0}.appiconset/{0}-20@3x{1}"
+  76:
+    exact_size: "76x76"
+    file_formats:
+      - "{0}.appiconset/{0}-76{1}"
+
+  80:
+    exact_size: "80x80"
+    file_formats: 
+      - "{0}.appiconset/{0}-40@2x{1}"
+
+  87:
+    exact_size: "87x87"
+    file_formats: 
+      - "{0}.appiconset/{0}-Small@3x{1}"
+    
+  120:
+    exact_size: "120x120"
+    file_formats:
+      - "{0}.appiconset/{0}-40@3x{1}"
+      - "{0}.appiconset/{0}-60@2x{1}"
+
+  152:
+    exact_size: "152x152"
+    file_formats:
+      - "{0}.appiconset/{0}-76@2x{1}"
+  
+  167:
+    exact_size: "167x167"
+    file_formats:
+      - "{0}.appiconset/{0}-83.5@2x{1}"
+  180:
+    exact_size: "180x180"
+    file_formats:
+      - "{0}.appiconset/{0}-60@3x{1}"
+
+ios_iphone_launch_portrait:
+  iphone4:
+    exact_liquid: "640x960"
+    file_formats:
+      - "{0}.launchimage/iphone4{1}"
+
+  iphoneSE:
+    exact_liquid: "640x1136"
+    file_formats:
+      - "{0}.launchimage/iphoneSE{1}"
+
+  iphone6:
+    exact_liquid: "750x1334"
+    file_formats:
+      - "{0}.launchimage/iphone6{1}"
+
+  iphone6Plus:
+    exact_liquid: "1242x2208"
+    file_formats:
+      - "{0}.launchimage/iphone6Plus{1}"
+
+ios_tablet_launch_portrait:
+  tablet:
+    exact_liquid: "768x1024"
+    file_formats:
+      - "{0}.launchimage/tablet-portrait{1}"
+
+  tablet2x:
+    exact_liquid: "1536x2048"
+    file_formats:
+      - "{0}.launchimage/tablet-portrait@2x{1}"
+
+ios_tablet_launch_landscape:
+  tablet:
+    exact_liquid: "1024x768"
+    file_formats:
+      - "{0}.launchimage/tablet-landscape{1}"
+
+  tablet2x:
+    exact_liquid: "2048x1536"
+    file_formats:
+      - "{0}.launchimage/tablet-landscape@2x{1}"
+
+ios_tutorial:
+  icon_1_3:
+    resize: 1/3
+    file_formats:
+      - "{0}.imageset/{0}{1}"
+
+  icon_2_3:
+    resize: 2/3
+    file_formats:
+      - "{0}.imageset/{0}@2x{1}"
+
+  original: 
+    resize: 1/1 
+    file_formats:
+      - "{0}.imageset/{0}@3x{1}"
+
+ios_artwork:
+  1024:
+    exact_size: "1024x1024"
+    file_formats:
+      - "../iTunesArtwork@2x{1}"
+  512:
+    exact_size: "512x512"
+    file_formats:
+      - "../iTunesArtwork{1}"
+
+android_product_icon: 
+  mipmap-hdpi: 
+    exact_size: 72x72
+    file_formats: 
+      - "mipmap-hdpi/{0}{1}"
+  mipmap-ldpi: 
+    exact_size: 36x36
+    file_formats: 
+      - "mipmap-ldpi/{0}{1}"
+  mipmap-mdpi: 
+    exact_size: 48x48
+    file_formats: 
+      - "mipmap-mdpi/{0}{1}"
+  mipmap-xhdpi: 
+    exact_size: 96x96
+    file_formats: 
+      - "mipmap-xhdpi/{0}{1}"
+  mipmap-xxhdpi: 
+    exact_size: 144x144
+    file_formats: 
+      - "mipmap-xxhdpi/{0}{1}"
+  mipmap-xxxhdpi: 
+    exact_size: 192x192
+    file_formats: 
+      - "mipmap-xxxhdpi/{0}{1}"
+
+android_banner: 
+  drawable-hdpi: 
+    exact_size: 84x84
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 42x42
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 56x56
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 112x112
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 168x168
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 224x224
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_icon: 
+  drawable-hdpi: 
+    exact_size: 72x72
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 36x36
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 48x48
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 96x96
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 144x144
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 192x192
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_launcher_bg_land: 
+  drawable-hdpi: 
+    exact_size: 720x450
+    file_formats: 
+      - "drawable-land-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 360x225
+    file_formats: 
+      - "drawable-land-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 480x300
+    file_formats: 
+      - "drawable-land-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 960x600
+    file_formats: 
+      - "drawable-land-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 1440x900
+    file_formats: 
+      - "drawable-land-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 1920x1200
+    file_formats: 
+      - "drawable-land-xxxhdpi/{0}{1}"
+
+android_launcher_bg_port: 
+  drawable-hdpi: 
+    exact_size: 450x720
+    file_formats: 
+      - "drawable-port-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 225x360
+    file_formats: 
+      - "drawable-port-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 300x480
+    file_formats: 
+      - "drawable-port-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 600x960
+    file_formats: 
+      - "drawable-port-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 900x1440
+    file_formats: 
+      - "drawable-port-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 1200x1920
+    file_formats: 
+      - "drawable-port-xxxhdpi/{0}{1}"
+
+android_launcher_icon: 
+  drawable-hdpi: 
+    exact_size: 192x192
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 96x96
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 128x128
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 256x256
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 384x384
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 512x512
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_launcher_product: 
+  drawable-hdpi: 
+    exact_size: 480x28
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 240x14
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 320x19
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 640x37
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 960x56
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 1280x75
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_launcher_ricoh_logo: 
+  drawable-hdpi: 
+    exact_size: 480x35
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 240x17
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 320x23
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 640x47
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 960x71
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 1280x94
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_ricoh_logo: 
+  drawable-hdpi: 
+    exact_size: 114x20
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 57x10
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 76x13
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 152x26
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 228x39
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 304x52
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_tutorial: 
+  drawable-hdpi: 
+    exact_size: 600x600
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 300x300
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 400x400
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 800x800
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 1200x1200
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 1600x1600
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
+
+android_badge_ja: 
+  drawable-hdpi: 
+    exact_size: 240x71
+    file_formats: 
+      - "drawable-ja-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 120x36
+    file_formats: 
+      - "drawable-ja-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 162x48
+    file_formats: 
+      - "drawable-ja-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 320x95
+    file_formats: 
+      - "drawable-ja-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 480x143
+    file_formats: 
+      - "drawable-ja-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 640x190
+    file_formats: 
+      - "drawable-ja-xxxhdpi/{0}{1}"
+
+android_badge_en: 
+  drawable-hdpi: 
+    exact_size: 240x71
+    file_formats: 
+      - "drawable-hdpi/{0}{1}"
+  drawable-ldpi: 
+    exact_size: 120x36
+    file_formats: 
+      - "drawable-ldpi/{0}{1}"
+  drawable-mdpi: 
+    exact_size: 162x48
+    file_formats: 
+      - "drawable-mdpi/{0}{1}"
+  drawable-xhdpi: 
+    exact_size: 320x95
+    file_formats: 
+      - "drawable-xhdpi/{0}{1}"
+  drawable-xxhdpi: 
+    exact_size: 480x143
+    file_formats: 
+      - "drawable-xxhdpi/{0}{1}"
+  drawable-xxxhdpi: 
+    exact_size: 640x190
+    file_formats: 
+      - "drawable-xxxhdpi/{0}{1}"
