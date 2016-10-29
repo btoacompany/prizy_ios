@@ -7,7 +7,16 @@
 //
 
 import Foundation
+import Foundation
+import UIKit
 
 func Localized(_ word:Wording) -> String {
     return NSLocalizedString( word.rawValue, comment: "")
 }
+
+extension UIViewController {
+    func transitionTo(_ segue:Segue) {
+        performSegue(withIdentifier: segue.rawValue, sender: self)
+    }
+}
+
