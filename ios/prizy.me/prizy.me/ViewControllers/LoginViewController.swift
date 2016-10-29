@@ -19,6 +19,8 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var rememberLabel: UILabel!
     
+    let requestManager = RequestManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,12 +52,33 @@ class LoginVC: UIViewController, UITextFieldDelegate{
 
     
     @IBAction func login(_ sender: UIButton) {
-         self.view.endEditing(true)
+        self.view.endEditing(true)
+        self.requestManager.login(email: self.emailField.text!, password: self.passwordField.text!, shouldRemember: self.rememberSwitch.isOn) {
+            status in
+            switch (status){
+            case .connectionError:
+                let alert  = UIAlertController(title: "Error", message: "Connection error", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: nil)
+            case .failed:
+                let alert  = UIAlertController(title: "Failed", message: "Incorrect password", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: nil)
+            case .ok(let sesson):
+                let alert  = UIAlertController(title: "Nice", message: sesson, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func forgot(_ sender: UIButton)
     {
         self.view.endEditing(true)
+        transitionTo(.SEGUE_LOGIN_TO_RECOVER)
     }
 
 

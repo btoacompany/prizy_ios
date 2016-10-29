@@ -101,7 +101,8 @@
                         <outlet property="passwordLabel" destination="V5a-z7-EUf" id="3RL-Tn-l1j"/>
                         <outlet property="rememberLabel" destination="hzG-bV-Msk" id="G9d-sZ-ZBE"/>
                         <outlet property="rememberSwitch" destination="VRK-8c-cDL" id="dvj-yP-I6d"/>
-                        <segue destination="48n-xK-0V7" kind="show" identifier="LoginToWeb" id="5SC-nR-UKf"/>
+                        <segue destination="48n-xK-0V7" kind="show" identifier="LoginWeb" id="5SC-nR-UKf"/>
+                        <segue destination="fxU-Qk-n59" kind="show" identifier="LoginRecover" id="hvY-DN-9h3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,6 +126,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJe-kh-7vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="890" y="37"/>
+        </scene>
+        <!--Recover Password-->
+        <scene sceneID="0nB-0l-XmH">
+            <objects>
+                <viewController title="Recover Password" id="fxU-Qk-n59" customClass="RecoveryPasswordVC" customModule="prizy_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dRk-7n-y6P"/>
+                        <viewControllerLayoutGuide type="bottom" id="XAa-NA-xSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4oI-Za-6lE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tBb-Ad-7Pn">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Jl-BO-1Lv" userLabel="login password stack">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRE-ya-PoM">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vOb-SM-7Pp">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vOb-SM-7Pp" firstAttribute="leading" secondItem="3Jl-BO-1Lv" secondAttribute="leading" id="IeX-TQ-T6N"/>
+                                            <constraint firstAttribute="trailing" secondItem="vOb-SM-7Pp" secondAttribute="trailing" id="oyg-dh-S3j"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiT-V3-caj">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Retrieve Password">
+                                            <color key="titleColor" red="0.79706572320000002" green="1" blue="0.1321568176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendRecoverPassword:" destination="fxU-Qk-n59" eventType="touchUpInside" id="ygI-yb-q2B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOO-jM-kLz">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.79706572320000002" green="1" blue="0.1321568176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissVC:" destination="fxU-Qk-n59" eventType="touchUpInside" id="PdA-kq-kNt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tBb-Ad-7Pn" firstAttribute="centerX" secondItem="4oI-Za-6lE" secondAttribute="centerX" id="6Q8-Dg-WMR"/>
+                            <constraint firstItem="tBb-Ad-7Pn" firstAttribute="centerY" secondItem="4oI-Za-6lE" secondAttribute="centerY" id="dN7-bX-Dr1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="bOO-jM-kLz" id="tLD-nq-Oab"/>
+                        <outlet property="emailField" destination="vOb-SM-7Pp" id="LwC-z9-0lN"/>
+                        <outlet property="emailLabel" destination="sRE-ya-PoM" id="uCu-rw-N6o"/>
+                        <outlet property="recoverPassword" destination="EiT-V3-caj" id="5op-tD-f1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1I8-pd-X8g" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="832"/>
         </scene>
     </scenes>
 </document>

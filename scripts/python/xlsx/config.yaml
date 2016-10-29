@@ -10,7 +10,7 @@
   output:
     iOS_Header:
       path: ../ios/prizy.me/prizy.me/Constants/Wording.swift
-      prefix: "IDS_"
+      prefix: "WRD_"
 
     iOS_SINGLE:
       ENGLISH: ../ios/prizy.me/prizy.me/Resources/Localization/en.lproj/Localizable.strings
