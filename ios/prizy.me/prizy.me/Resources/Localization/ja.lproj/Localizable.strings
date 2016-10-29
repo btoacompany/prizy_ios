@@ -8,6 +8,6 @@
 "remember_me" = "ログイン状態を保持する";
 "forgot_password" = "パスワードを忘れましたか？";
 "logout" = "ログアウト";
-"recover_password" = "";
-"cancel" = "";
+"recover_password" = "送信";
+"cancel" = "Cancel";
 
