@@ -88,8 +88,8 @@ class RequestManager {
                 switch (httpResponse.statusCode){
                 case 302:
                     if let cookies = httpResponse.allHeaderFields["Set-Cookie"] as? String {
-                        if let session = self.splitCookie(cookies, forKey: "_perks_session") {
-                          handler(.ok(session))
+                        if self.splitCookie(cookies, forKey: "_perks_session") != nil{
+                          handler(.ok(cookies))
                         }
                     }
                     handler(.failed)

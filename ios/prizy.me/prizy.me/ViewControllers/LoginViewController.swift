@@ -20,6 +20,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var rememberLabel: UILabel!
     
     let requestManager = RequestManager()
+    var session:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +67,9 @@ class LoginVC: UIViewController, UITextFieldDelegate{
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(defaultAction)
                 self.present(alert, animated: true, completion: nil)
-            case .ok(let sesson):
-                let alert  = UIAlertController(title: "Nice", message: sesson, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(defaultAction)
-                self.present(alert, animated: true, completion: nil)
+            case .ok(let session):
+                self.session = session
+                self.transitionTo(.SEGUE_LOGIN_TO_WEB)
             }
         }
     }
@@ -81,6 +80,12 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         transitionTo(.SEGUE_LOGIN_TO_RECOVER)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.SEGUE_LOGIN_TO_WEB.rawValue {
+            let vc = segue.destination as! WebVC
+            vc.session = self.session!
+        }
+    }
 
 }
 
