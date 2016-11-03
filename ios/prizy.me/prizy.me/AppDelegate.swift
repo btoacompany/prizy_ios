@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let base64Token = deviceToken.base64EncodedString()
+        UIPasteboard.general.string="Push Notification Device Token : \(base64Token)"
         print(base64Token)
     }
     
