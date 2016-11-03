@@ -63,7 +63,7 @@ class WebVC: UIViewController, WKNavigationDelegate {
         if url.host == "www.prizy.me" || url.host == "prizy.me" {
             if url.absoluteString.contains("prizy.me/login") {
                 decisionHandler(.cancel)
-                self.dismiss(animated: true, completion: nil)
+                self.logout()
             }
             else if request.value(forHTTPHeaderField: "Cookie") == nil {
                 request.addValue(self.session, forHTTPHeaderField: "Cookie")
@@ -80,10 +80,16 @@ class WebVC: UIViewController, WKNavigationDelegate {
             let url = httpResponse.url!
             if url.absoluteString.contains("www.prizy.me/login") {
                 decisionHandler(.cancel)
-                self.dismiss(animated: true, completion: nil)
+                self.logout()
+                
             }
             decisionHandler(.allow)
         }
+    }
+    
+    func logout() {
+        SessionManager.sharedInstance.session=""
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

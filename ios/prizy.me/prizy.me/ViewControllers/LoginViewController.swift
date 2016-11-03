@@ -20,7 +20,6 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var rememberLabel: UILabel!
     
     let requestManager = RequestManager()
-    var session:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +32,11 @@ class LoginVC: UIViewController, UITextFieldDelegate{
         self.loginButton.setTitle(Localized(.WRD_LOGIN), for: .normal)
         self.forgotButton.setTitle(Localized(.WRD_FORGOT_PASSWORD), for: .normal)
         self.rememberLabel.text = Localized(.WRD_REMEMBER_ME)
+        if !(SessionManager.sharedInstance.session?.isEmpty)! {
+            DispatchQueue.main.async(execute: {
+                self.transitionTo(.SEGUE_LOGIN_TO_WEB)
+            })
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -68,7 +72,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
                 alert.addAction(defaultAction)
                 self.present(alert, animated: true, completion: nil)
             case .ok(let session):
-                self.session = session
+                SessionManager.sharedInstance.session = session
                 self.transitionTo(.SEGUE_LOGIN_TO_WEB)
             }
         }
@@ -83,7 +87,9 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.SEGUE_LOGIN_TO_WEB.rawValue {
             let vc = segue.destination as! WebVC
-            vc.session = self.session!
+            let s = SessionManager.sharedInstance.session!
+            print(s)
+            vc.session = s
         }
     }
 
