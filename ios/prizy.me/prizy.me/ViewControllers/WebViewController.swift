@@ -26,14 +26,13 @@ class WebVC: UIViewController, WKNavigationDelegate {
         self.view.addSubview(webView)
         self.webview = webView
         self.webview.navigationDelegate = self
-        let js = "document.cookie='\(self.session)';domain='www.prizy.me';"
-        self.webview.evaluateJavaScript(js) { (data, error) -> Void in
-            self.webview.load({
+       
+        self.webview.load({
                 var urlRequest = URLRequest(url: URL(string: "https://www.prizy.me/user")!)
                 urlRequest.addValue(self.session, forHTTPHeaderField: "Cookie")
                 return urlRequest
                 }())
-        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,11 +64,11 @@ class WebVC: UIViewController, WKNavigationDelegate {
                 decisionHandler(.cancel)
                 self.logout()
             }
-            else if request.value(forHTTPHeaderField: "Cookie") == nil {
-                request.addValue(self.session, forHTTPHeaderField: "Cookie")
+            /*else if request.value(forHTTPHeaderField: "Cookie") == nil {
+                //request.addValue(self.session, forHTTPHeaderField: "Cookie")
                 decisionHandler(.cancel)
                 webView.load(request)
-            }
+            }*/
         }
         
         decisionHandler(.allow)

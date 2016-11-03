@@ -70,7 +70,7 @@ class RequestManager {
     func login(email:String, password:String, shouldRemember:Bool, handler:@escaping LoginHandler) {
         var remember = "0"
         if shouldRemember {
-            remember = "1"
+            remember = "0"
         }
         
         let request  = self.createPostRequest(url:RequestManager.loginURL, parameters: ["email":email,
