@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69801AD21DAB9D5B00417291 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69801AD01DAB9D5B00417291 /* Localizable.strings */; };
+		699B47031DC8CAFE0045E9DB /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699B47021DC8CAFE0045E9DB /* PushNotification.swift */; };
 		69A225AB1DC4E07D0052F286 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A225AA1DC4E07D0052F286 /* Segue.swift */; };
 		69A225AD1DC4E21F0052F286 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A225AC1DC4E21F0052F286 /* RecoverPasswordViewController.swift */; };
 		69A225AF1DC4F18A0052F286 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A225AE1DC4F18A0052F286 /* RequestManager.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		69801AD11DAB9D5B00417291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69801AD31DAB9D6000417291 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/Localization/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		699B47021DC8CAFE0045E9DB /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotification.swift; path = Controllers/PushNotification.swift; sourceTree = "<group>"; };
 		69A225A91DC4DACF0052F286 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
 		69A225AA1DC4E07D0052F286 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segue.swift; path = Constants/Segue.swift; sourceTree = "<group>"; };
 		69A225AC1DC4E21F0052F286 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecoverPasswordViewController.swift; path = ViewControllers/RecoverPasswordViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		69AE10F81DAA70C5001E31DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		69AE10F91DAA70C5001E31DD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ViewControllers/WebViewController.swift; sourceTree = "<group>"; };
 		69AE10FF1DAAA295001E31DD /* Wording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wording.swift; path = Constants/Wording.swift; sourceTree = "<group>"; };
+		69D2F2381DC5EF4D00DDFAEE /* prizy.me.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = prizy.me.entitlements; sourceTree = "<group>"; };
 		69FCD2B81DA9E2490020B1F1 /* prizy.me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prizy.me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FCD2BB1DA9E2490020B1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69FCD2C71DA9E2490020B1F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				69A225AE1DC4F18A0052F286 /* RequestManager.swift */,
+				699B47021DC8CAFE0045E9DB /* PushNotification.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +151,7 @@
 		69FCD2BA1DA9E2490020B1F1 /* prizy.me */ = {
 			isa = PBXGroup;
 			children = (
+				69D2F2381DC5EF4D00DDFAEE /* prizy.me.entitlements */,
 				692AADB01DAD30A400A8BB7D /* Controllers */,
 				69801ACD1DAB9AA100417291 /* Helper */,
 				69AE10FC1DAAA221001E31DD /* Constants */,
@@ -275,6 +280,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q9Y32TNFEQ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					69FCD2CB1DA9E2490020B1F1 = {
 						CreatedOnToolsVersion = 8.0;
@@ -350,6 +360,7 @@
 				69A225AB1DC4E07D0052F286 /* Segue.swift in Sources */,
 				69A225B11DC4F1B70052F286 /* Addon.swift in Sources */,
 				69A225AF1DC4F18A0052F286 /* RequestManager.swift in Sources */,
+				699B47031DC8CAFE0045E9DB /* PushNotification.swift in Sources */,
 				69A225AD1DC4E21F0052F286 /* RecoverPasswordViewController.swift in Sources */,
 				69FCD2BC1DA9E2490020B1F1 /* AppDelegate.swift in Sources */,
 			);
@@ -500,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = prizy.me/prizy.me.entitlements;
 				DEVELOPMENT_TEAM = Q9Y32TNFEQ;
 				INFOPLIST_FILE = prizy.me/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -514,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = prizy.me/prizy.me.entitlements;
 				DEVELOPMENT_TEAM = Q9Y32TNFEQ;
 				INFOPLIST_FILE = prizy.me/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
