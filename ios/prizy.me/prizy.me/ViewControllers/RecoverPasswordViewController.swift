@@ -33,7 +33,7 @@ class RecoveryPasswordVC: UIViewController {
         
         let text = Localized(.WRD_CANCEL)
         let forgotText = NSMutableAttributedString(string: text)
-        let r = NSRange.init(location: 0, length: 6)
+        let r = NSRange.init(location: 0, length: 8)
         forgotText.addAttribute(NSLinkAttributeName, value: text, range: r)
         self.cancel.setAttributedTitle(forgotText, for: .normal)
     }

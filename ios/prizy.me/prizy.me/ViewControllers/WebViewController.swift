@@ -58,7 +58,7 @@ class WebVC: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url!
-        var request = navigationAction.request
+        //var request = navigationAction.request
         if url.host == "www.prizy.me" || url.host == "prizy.me" {
             if url.absoluteString.contains("prizy.me/login") {
                 decisionHandler(.cancel)
