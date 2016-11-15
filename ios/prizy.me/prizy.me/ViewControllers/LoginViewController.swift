@@ -10,28 +10,39 @@ import UIKit
 class LoginVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
-    @IBOutlet weak var rememberSwitch: UISwitch!
+
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotButton: UIButton!
-    
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var rememberLabel: UILabel!
-    
+
     let requestManager = RequestManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emailField.delegate = self;
-        self.passwordField.delegate = self;
+        let view: UIView = self.view
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = view.bounds
+        let startColor = UIColor.init(red: 1.0, green: 0.470588, blue: 0.0, alpha: 1.0)
+        let endColor = UIColor.init(red: 1.0, green: 0.764706, blue: 0.0, alpha: 1.0)
+        gradient.colors = [startColor.cgColor, endColor.cgColor]
+        gradient.startPoint = CGPoint(x:0, y:0.5)
+        gradient.endPoint = CGPoint(x:1, y:0.5)
+        view.layer.insertSublayer(gradient, at: 0)
         
-        self.emailLabel.text = Localized(.WRD_EMAIL)
-        self.passwordLabel.text = Localized(.WRD_PASSWORD)
+        self.emailField.delegate = self
+        self.emailField.attributedPlaceholder = NSAttributedString(string: Localized(.WRD_EMAIL), attributes: [NSForegroundColorAttributeName: UIColor.white.cgColor])
+        
+        self.passwordField.delegate = self
+        self.passwordField.attributedPlaceholder = NSAttributedString(string: Localized(.WRD_PASSWORD), attributes: [NSForegroundColorAttributeName: UIColor.white.cgColor])
+        
         self.loginButton.setTitle(Localized(.WRD_LOGIN), for: .normal)
-        self.forgotButton.setTitle(Localized(.WRD_FORGOT_PASSWORD), for: .normal)
-        self.rememberLabel.text = Localized(.WRD_REMEMBER_ME)
+        
+        let text = Localized(.WRD_FORGOT_PASSWORD)
+        let forgotText = NSMutableAttributedString(string: text)
+        let r = NSRange.init(location: 0, length: 13)
+        forgotText.addAttribute(NSLinkAttributeName, value: text, range: r)
+        self.forgotButton.setAttributedTitle(forgotText, for: .normal)
+        
         if !(SessionManager.sharedInstance.session?.isEmpty)! {
             DispatchQueue.main.async(execute: {
                 self.transitionTo(.SEGUE_LOGIN_TO_WEB)
@@ -58,7 +69,7 @@ class LoginVC: UIViewController, UITextFieldDelegate{
     
     @IBAction func login(_ sender: UIButton) {
         self.view.endEditing(true)
-        self.requestManager.login(email: self.emailField.text!, password: self.passwordField.text!, shouldRemember: self.rememberSwitch.isOn) {
+        self.requestManager.login(email: self.emailField.text!, password: self.passwordField.text!, shouldRemember:false) {
             status in
             switch (status){
             case .connectionError:

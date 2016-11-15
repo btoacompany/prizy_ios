@@ -1,6 +1,6 @@
 /*wording.xlsx*/
 /* THIS IS A GENERATED FILE , ANY CHANGES MADE TO THIS FILE WILL BE ERASED */
-"login" = "ログイン";
+"login" = "ログイン  ＞";
 "email" = "メールアドレス";
 "email_text_hint" = "";
 "password" = "パスワード";
@@ -9,5 +9,5 @@
 "forgot_password" = "パスワードを忘れましたか？";
 "logout" = "ログアウト";
 "recover_password" = "送信";
-"cancel" = "Cancel";
+"cancel" = "＜　Cancel";
 
