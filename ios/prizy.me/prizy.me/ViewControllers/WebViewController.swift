@@ -58,17 +58,17 @@ class WebVC: UIViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url!
-        //var request = navigationAction.request
+        var request = navigationAction.request
         if url.host == "www.prizy.me" || url.host == "prizy.me" {
             if url.absoluteString.contains("prizy.me/login") {
                 decisionHandler(.cancel)
                 self.logout()
             }
-            /*else if request.value(forHTTPHeaderField: "Cookie") == nil {
-                //request.addValue(self.session, forHTTPHeaderField: "Cookie")
+            else if request.value(forHTTPHeaderField: "Cookie") == nil {
+                request.addValue(self.session, forHTTPHeaderField: "Cookie")
                 decisionHandler(.cancel)
                 webView.load(request)
-            }*/
+            }
         }
         
         decisionHandler(.allow)
