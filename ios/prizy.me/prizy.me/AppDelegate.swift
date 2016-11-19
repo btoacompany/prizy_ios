@@ -22,7 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return settings
             }())
         
+        if !(SessionManager.sharedInstance.session?.isEmpty)! {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let web = mainStoryboard.instantiateViewController(withIdentifier: "WebVC") as! WebVC
+            web.session = SessionManager.sharedInstance.session!
+            self.window?.rootViewController = web
+            self.window?.makeKeyAndVisible()
+        }
+
         return true
+    }
+    
+    func dismissToLoginScreen() {
+        if ((self.window?.rootViewController as? LoginVC) != nil) {
+            self.window!.rootViewController!.dismiss(animated: true, completion: nil)
+        }
+        else {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC")
+            self.window?.rootViewController = vc
+        }
     }
     
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {

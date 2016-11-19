@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginVC" customModule="prizy_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="Login" id="BYZ-38-t0r" customClass="LoginVC" customModule="prizy_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -116,7 +116,7 @@
         <!--Web-->
         <scene sceneID="DRL-af-8T7">
             <objects>
-                <viewController title="Web" id="48n-xK-0V7" customClass="WebVC" customModule="prizy_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebVC" title="Web" id="48n-xK-0V7" customClass="WebVC" customModule="prizy_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WEe-z3-yjS"/>
                         <viewControllerLayoutGuide type="bottom" id="Yud-7g-LQX"/>

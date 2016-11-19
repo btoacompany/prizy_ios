@@ -88,7 +88,8 @@ class WebVC: UIViewController, WKNavigationDelegate {
     
     func logout() {
         SessionManager.sharedInstance.session=""
-        self.dismiss(animated: true, completion: nil)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.dismissToLoginScreen()
     }
     /*
     // MARK: - Navigation

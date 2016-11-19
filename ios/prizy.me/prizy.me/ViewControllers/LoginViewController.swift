@@ -28,12 +28,6 @@ class LoginVC: PrizyVC, UITextFieldDelegate{
         self.loginButton.setTitle(Localized(.WRD_LOGIN), for: .normal)
         
         self.forgotButton.setUnderlinedTitle(Localized(.WRD_FORGOT_PASSWORD), for: .normal)
-        
-        if !(SessionManager.sharedInstance.session?.isEmpty)! {
-            DispatchQueue.main.async(execute: {
-                self.transitionTo(.SEGUE_LOGIN_TO_WEB)
-            })
-        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

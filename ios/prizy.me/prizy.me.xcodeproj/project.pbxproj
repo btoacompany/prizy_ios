@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		692862A21DE099D800649091 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692862A11DE099D800649091 /* SplashViewController.swift */; };
 		692862A41DE0A60600649091 /* PrizyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692862A31DE0A60600649091 /* PrizyViewController.swift */; };
 		69801AD21DAB9D5B00417291 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69801AD01DAB9D5B00417291 /* Localizable.strings */; };
 		699B47031DC8CAFE0045E9DB /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699B47021DC8CAFE0045E9DB /* PushNotification.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		692862A11DE099D800649091 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = ViewControllers/SplashViewController.swift; sourceTree = "<group>"; };
 		692862A31DE0A60600649091 /* PrizyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizyViewController.swift; path = Helper/PrizyViewController.swift; sourceTree = "<group>"; };
 		69801AD11DAB9D5B00417291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69801AD31DAB9D6000417291 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/Localization/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				69AE10F81DAA70C5001E31DD /* LoginViewController.swift */,
 				69AE10F91DAA70C5001E31DD /* WebViewController.swift */,
 				69A225AC1DC4E21F0052F286 /* RecoverPasswordViewController.swift */,
-				692862A11DE099D800649091 /* SplashViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 				69AE11001DAAA295001E31DD /* Wording.swift in Sources */,
 				69A225AB1DC4E07D0052F286 /* Segue.swift in Sources */,
 				69A225B11DC4F1B70052F286 /* Addon.swift in Sources */,
-				692862A21DE099D800649091 /* SplashViewController.swift in Sources */,
 				69A225AF1DC4F18A0052F286 /* RequestManager.swift in Sources */,
 				699B47031DC8CAFE0045E9DB /* PushNotification.swift in Sources */,
 				69A225AD1DC4E21F0052F286 /* RecoverPasswordViewController.swift in Sources */,
