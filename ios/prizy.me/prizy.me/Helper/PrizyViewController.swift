@@ -9,23 +9,28 @@
 import Foundation
 import UIKit
 
+
+public func setGradientBackground(_ view:UIView) {
+    let gradient: CAGradientLayer = CAGradientLayer()
+    gradient.frame = view.bounds
+    
+    let startColor = UIColor.init(red: 1.0, green: 0.470588, blue: 0.0, alpha: 1.0)
+    let endColor = UIColor.init(red: 1.0, green: 0.764706, blue: 0.0, alpha: 1.0)
+    
+    gradient.colors = [startColor.cgColor, endColor.cgColor]
+    gradient.startPoint = CGPoint(x:0, y:0.5)
+    gradient.endPoint = CGPoint(x:1, y:0.5)
+    
+    view.layer.insertSublayer(gradient, at: 0)
+}
+
+
 class PrizyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let view: UIView = self.view
-        
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.frame = view.bounds
-        
-        let startColor = UIColor.init(red: 1.0, green: 0.470588, blue: 0.0, alpha: 1.0)
-        let endColor = UIColor.init(red: 1.0, green: 0.764706, blue: 0.0, alpha: 1.0)
-        
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.startPoint = CGPoint(x:0, y:0.5)
-        gradient.endPoint = CGPoint(x:1, y:0.5)
-        
-        view.layer.insertSublayer(gradient, at: 0)
+      
+        setGradientBackground(self.view)
+
         self.hideKeyboardWhenTappedAround()
     }
     
