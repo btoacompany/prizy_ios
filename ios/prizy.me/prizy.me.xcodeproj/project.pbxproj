@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6928629E1DE089B700649091 /* PrizyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928629D1DE089B700649091 /* PrizyViewController.swift */; };
 		69801AD21DAB9D5B00417291 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69801AD01DAB9D5B00417291 /* Localizable.strings */; };
 		699B47031DC8CAFE0045E9DB /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699B47021DC8CAFE0045E9DB /* PushNotification.swift */; };
 		699B9ADB1DCAE27A004F876A /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 699B9ADA1DCAE27A004F876A /* KeychainWrapper.m */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6928629D1DE089B700649091 /* PrizyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizyViewController.swift; sourceTree = "<group>"; };
 		69801AD11DAB9D5B00417291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69801AD31DAB9D6000417291 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/Localization/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		699B47021DC8CAFE0045E9DB /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotification.swift; path = Controllers/PushNotification.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6928629A1DE0892900649091 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6928629D1DE089B700649091 /* PrizyViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		692AADB01DAD30A400A8BB7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		69FCD2BA1DA9E2490020B1F1 /* prizy.me */ = {
 			isa = PBXGroup;
 			children = (
+				6928629A1DE0892900649091 /* View */,
 				69D2F2381DC5EF4D00DDFAEE /* prizy.me.entitlements */,
 				699B9ADD1DCAE30E004F876A /* prizy.me-Bridging-Header.h */,
 				692AADB01DAD30A400A8BB7D /* Controllers */,
@@ -366,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AE10FA1DAA70C5001E31DD /* LoginViewController.swift in Sources */,
+				6928629E1DE089B700649091 /* PrizyViewController.swift in Sources */,
 				69AE10FB1DAA70C5001E31DD /* WebViewController.swift in Sources */,
 				69AE11001DAAA295001E31DD /* Wording.swift in Sources */,
 				69A225AB1DC4E07D0052F286 /* Segue.swift in Sources */,
