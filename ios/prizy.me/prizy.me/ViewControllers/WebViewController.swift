@@ -26,7 +26,9 @@ class WebVC: UIViewController, WKNavigationDelegate {
         self.view.addSubview(webView)
         self.webview = webView
         self.webview.navigationDelegate = self
-       
+
+        self.webview.scrollView.bounces = false;
+        self.webview.scrollView.pinchGestureRecognizer?.isEnabled = false;
         self.webview.load({
                 var urlRequest = URLRequest(url: URL(string: "https://www.prizy.me/user")!)
                 urlRequest.addValue(self.session, forHTTPHeaderField: "Cookie")
