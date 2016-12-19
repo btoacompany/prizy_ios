@@ -83,7 +83,15 @@ class RequestManager {
 
 
     func createPostRequest(url:URL,parameters:Parameters, headers:Parameters) -> URLRequest{
+        var request = URLRequest(url: url)
         
+        request.httpMethod = "POST"
+        
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+        for (keyheader,valueHeader) in headers{
+            request.addValue(valueHeader, forHTTPHeaderField: keyheader)
+        }
+
         func postBody(_ dictBody: Parameters) ->  Data {
             var body = String()
             var values = Array<String>()
@@ -93,21 +101,14 @@ class RequestManager {
             body = values.joined(separator: "&")
             return body.data(using: .utf8)!
         }
-        
-        var request = URLRequest(url: url)
-   
-        request.httpMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
-        for (keyheader,valueHeader) in headers{
-            request.addValue(valueHeader, forHTTPHeaderField: keyheader)
-        }
+       
         request.httpBody = postBody(parameters)
         return request
     }
     
     func updatePushNotificationToken(_ token: String) {
         self.token = token
-        print("token:\(token)", token)
+        print("token:\(token)")
     }
     
     func registerPushNotification() {
