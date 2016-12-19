@@ -89,6 +89,7 @@ class WebVC: UIViewController, WKNavigationDelegate {
     }
     
     func logout() {
+        RequestManager.sharedInstance.unregisterPushNotification()
         SessionManager.sharedInstance.session=""
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.dismissToLoginScreen()

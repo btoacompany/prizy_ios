@@ -23,7 +23,7 @@ typealias LoginHandler = (LoginStatus)->()
 typealias RecoverPasswordHandler = (RecoverPasswordStatus)->()
 typealias Parameters = Dictionary<String,String>
 class RequestManager {
-    
+    static let sharedInstance = RequestManager()
     class RedirectManager : NSObject, URLSessionTaskDelegate {
         
         public func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Swift.Void){
@@ -36,13 +36,28 @@ class RequestManager {
         
     }
     
-
+    
     private static var loginURL = URL(string: "https://www.prizy.me/login/complete")!
     private static var recoverPasswordURL = URL(string: "https://www.prizy.me/forgot_password/submit")!
-    
+    private static var registerPushNotURL = URL(string: "https://www.prizy.me/device/ios/register")!
+    private static var unregisterPushNotURL = URL(string: "https://www.prizy.me/device/ios/unregister")!
     private var session:URLSession = URLSession(configuration: .ephemeral,
                                                 delegate: RedirectManager(),
                                                 delegateQueue: OperationQueue.current)
+    private var token:String?
+    
+    func splitCookie(_ cookie:String, forKey key:String) -> String? {
+        let components = cookie.replacingOccurrences(of: ";", with: ",").components(separatedBy: ",").map({
+            value in
+            value.trimmingCharacters(in: .whitespaces)
+        })
+        
+        let result = components.first(where: {
+            (value:String) in
+            return value .hasPrefix(key)
+        })
+        return result
+    }
 
     
     func createPostRequest(url:URL,parameters:Parameters) -> URLRequest{
@@ -58,16 +73,95 @@ class RequestManager {
         }
         
         var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+        
+        request.httpBody = postBody(parameters)
+        return request
+    }
+
+
+    func createPostRequest(url:URL,parameters:Parameters, headers:Parameters) -> URLRequest{
+        
+        func postBody(_ dictBody: Parameters) ->  Data {
+            var body = String()
+            var values = Array<String>()
+            for (key,value) in dictBody {
+                values.append(String .localizedStringWithFormat("%@=%@", key,value))
+            }
+            body = values.joined(separator: "&")
+            return body.data(using: .utf8)!
+        }
+        
+        var request = URLRequest(url: url)
    
         request.httpMethod = "POST"
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
-
+        for (keyheader,valueHeader) in headers{
+            request.addValue(valueHeader, forHTTPHeaderField: keyheader)
+        }
         request.httpBody = postBody(parameters)
         return request
     }
     
+    func updatePushNotificationToken(_ token: String) {
+        self.token = token
+        print("token:\(token)", token)
+    }
     
+    func registerPushNotification() {
+        if self.token != nil  {
+            if !(SessionManager.sharedInstance.session?.isEmpty)! {
+                let sessionKey = SessionManager.sharedInstance.session!
+                let request  = self.createPostRequest(url:RequestManager.registerPushNotURL,
+                                                      parameters: ["token":self.token!],
+                                                      headers:  ["Cookie":sessionKey])
+                print ("URL:\(RequestManager.registerPushNotURL)")
+                print ("Session:\(sessionKey)")
+                let task = session.dataTask(with: request){ (data: Data?, response: URLResponse?, error: Error?) in
+                    
+                    if let httpResponse = response as? HTTPURLResponse {
+                        print(httpResponse.statusCode)
+                        switch (httpResponse.statusCode){
+                        case 302:
+                            print("fail")
+                        default:
+                            print("OK")
+                        }
+                    }
+                }
+
+                task.resume()
+            }
+        }
+    }
+    func unregisterPushNotification() {
+        if self.token != nil  {
+            let request  = self.createPostRequest(url:RequestManager.unregisterPushNotURL,
+                                                             parameters: ["token":self.token!]
+                                                             )
+            let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print(httpResponse.statusCode)
+                    switch (httpResponse.statusCode){
+                    case 302:
+                        print("fail")
+                    default:
+                        print("OK")
+                    }
+                }
+            }
+
+            task.resume()
+
+        }
+    }
+    
+
     func login(email:String, password:String, shouldRemember:Bool, handler:@escaping LoginHandler) {
+        
         var remember = "0"
         if shouldRemember {
             remember = "0"
@@ -85,6 +179,7 @@ class RequestManager {
             }
             
             if let httpResponse = response as? HTTPURLResponse {
+                
                 switch (httpResponse.statusCode){
                 case 302:
                     if let cookies = httpResponse.allHeaderFields["Set-Cookie"] as? String {
@@ -115,21 +210,4 @@ class RequestManager {
         }
         task.resume()
     }
-    
-    
-    func splitCookie(_ cookie:String, forKey key:String) -> String? {
-        let components = cookie.replacingOccurrences(of: ";", with: ",").components(separatedBy: ",").map({
-            value in
-            value.trimmingCharacters(in: .whitespaces)
-        })
-        
-        let result = components.first(where: {
-            (value:String) in
-            return value .hasPrefix(key)
-        })
-        return result
-    }
-    
-    
-    
 }

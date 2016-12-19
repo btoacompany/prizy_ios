@@ -2,11 +2,11 @@
 
 import UIKit
 
-var str = "Hello, playground"
-let components = str.components(separatedBy: ",")
-let data = components.first(where: {
-    value in
-    return value.hasPrefix("Hello")
-})
+let d = "esfgfhmjdf".data(using: .utf8)
 
-print(data)
+var hexstring = ""
+for var c in d! {
+    hexstring += String(c, radix: 16)
+    
+}
+print(hexstring)

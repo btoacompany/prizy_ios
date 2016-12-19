@@ -14,7 +14,7 @@ class LoginVC: PrizyVC, UITextFieldDelegate{
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotButton: UIButton!
 
-    let requestManager = RequestManager()
+    let requestManager = RequestManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,7 @@ class LoginVC: PrizyVC, UITextFieldDelegate{
                 self.present(alert, animated: true, completion: nil)
             case .ok(let session):
                 SessionManager.sharedInstance.session = session
+                RequestManager.sharedInstance.registerPushNotification()
                 self.transitionTo(.SEGUE_LOGIN_TO_WEB)
             }
         }
