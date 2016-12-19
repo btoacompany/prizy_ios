@@ -54,7 +54,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         var hexstring = ""
         for  c in deviceToken {
-            hexstring += String(c, radix: 16)
+            let v = String(c, radix: 16)
+            if c < 16 {
+                hexstring += ("0"+v)
+            }
+            else {
+                hexstring += v
+            }
+            
         }
         
         RequestManager.sharedInstance.updatePushNotificationToken(hexstring)
