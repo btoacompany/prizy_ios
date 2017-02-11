@@ -64,7 +64,7 @@ class WebVC: UIViewController, WKNavigationDelegate {
         if url.host == "www.prizy.me" || url.host == "prizy.me" {
             if url.absoluteString.contains("prizy.me/login") {
                 decisionHandler(.cancel)
-                //self.logout()
+                self.logout()
             }
             else if url.absoluteString.contains("prizy.me/user/give_points"){
                 
@@ -84,7 +84,7 @@ class WebVC: UIViewController, WKNavigationDelegate {
             let url = httpResponse.url!
             if url.absoluteString.contains("www.prizy.me/login") {
                 decisionHandler(.cancel)
-                //self.logout()
+                self.logout()
                 
             }
             decisionHandler(.allow)

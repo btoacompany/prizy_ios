@@ -63,6 +63,8 @@ class LoginVC: PrizyVC, UITextFieldDelegate{
                 SessionManager.sharedInstance.session = session
                 RequestManager.sharedInstance.registerPushNotification()
                 self.transitionTo(.SEGUE_LOGIN_TO_WEB)
+                self.emailField.text = ""
+                self.passwordField.text = ""
             }
         }
     }
