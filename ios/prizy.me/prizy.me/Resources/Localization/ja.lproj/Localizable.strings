@@ -9,5 +9,12 @@
 "forgot_password" = "パスワードを忘れましたか？";
 "logout" = "ログアウト";
 "recover_password" = "送信";
-"cancel" = "＜　Cancel";
+"cancel" = "戻る";
+"error_header" = "";
+"connection_error" = "";
+"failed_header" = "";
+"incorrect_password_error" = "";
+"recover_password_alert_header" = "";
+"recover_password_alert_msg" = "";
+"alert_button_ok" = "";
 

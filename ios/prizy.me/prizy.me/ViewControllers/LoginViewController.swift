@@ -50,13 +50,13 @@ class LoginVC: PrizyVC, UITextFieldDelegate{
             status in
             switch (status){
             case .connectionError:
-                let alert  = UIAlertController(title: "Error", message: "Connection error", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                let alert  = UIAlertController(title: Localized(.WRD_ERROR_HEADER), message: Localized(.WRD_CONNECTION_ERROR) , preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: Localized(.WRD_ALERT_BUTTON_OK), style: .default, handler: nil)
                 alert.addAction(defaultAction)
                 self.present(alert, animated: true, completion: nil)
             case .failed:
-                let alert  = UIAlertController(title: "Failed", message: "Incorrect password", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                let alert  = UIAlertController(title: Localized(.WRD_FAILED_HEADER), message: Localized(.WRD_INCORRECT_PASSWORD_ERROR), preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: Localized(.WRD_ALERT_BUTTON_OK), style: .default, handler: nil)
                 alert.addAction(defaultAction)
                 self.present(alert, animated: true, completion: nil)
             case .ok(let session):
