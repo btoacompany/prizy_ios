@@ -14,7 +14,7 @@
 "connection_error" = "Connection error";
 "failed_header" = "Failed";
 "incorrect_password_error" = "Incorrect password";
-"recover_password_alert_header" = "Nice";
+"recover_password_alert_header" = "";
 "recover_password_alert_msg" = "Sent";
 "alert_button_ok" = "OK";
 

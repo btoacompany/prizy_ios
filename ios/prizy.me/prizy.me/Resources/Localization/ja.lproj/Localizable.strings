@@ -1,20 +1,20 @@
 /*wording.xlsx*/
 /* THIS IS A GENERATED FILE , ANY CHANGES MADE TO THIS FILE WILL BE ERASED */
-"login" = "ログイン  ＞";
+"login" = "ログイン";
 "email" = "メールアドレス";
 "email_text_hint" = "";
 "password" = "パスワード";
 "password_text_hint" = "";
 "remember_me" = "ログイン状態を保持する";
-"forgot_password" = "パスワードを忘れましたか？";
+"forgot_password" = "パスワードを忘れた場合";
 "logout" = "ログアウト";
-"recover_password" = "送信";
+"recover_password" = "";
 "cancel" = "戻る";
-"error_header" = "";
-"connection_error" = "";
-"failed_header" = "";
-"incorrect_password_error" = "";
-"recover_password_alert_header" = "";
-"recover_password_alert_msg" = "";
-"alert_button_ok" = "";
+"error_header" = "エラー";
+"connection_error" = "ネットワークエラー";
+"failed_header" = "ログインできませんでした";
+"incorrect_password_error" = "パスワードが違います";
+"recover_password_alert_header" = "完了";
+"recover_password_alert_msg" = "送信しました";
+"alert_button_ok" = "OK";
 
