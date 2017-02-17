@@ -8,7 +8,7 @@
 "remember_me" = "ログイン状態を保持する";
 "forgot_password" = "パスワードを忘れた場合";
 "logout" = "ログアウト";
-"recover_password" = "";
+"recover_password" = "送信";
 "cancel" = "戻る";
 "error_header" = "エラー";
 "connection_error" = "ネットワークエラー";
