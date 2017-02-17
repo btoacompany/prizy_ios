@@ -17,7 +17,7 @@ class RecoveryPasswordVC: PrizyVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailField.attributedPlaceholder = NSAttributedString(string: Localized(.WRD_EMAIL), attributes: [NSForegroundColorAttributeName: UIColor.white.cgColor])
+        self.emailField.attributedPlaceholder = NSAttributedString(string: Localized(.WRD_EMAIL), attributes: [NSForegroundColorAttributeName: UIColor.white])
         
         self.recoverPassword.setTitle(Localized(.WRD_RECOVER_PASSWORD), for: .normal)
         
@@ -31,7 +31,7 @@ class RecoveryPasswordVC: PrizyVC {
                 status in
                 switch status {
                 case .ok:
-                    let alert  = UIAlertController(title: "Nice", message: "Sent", preferredStyle: .alert)
+                    let alert  = UIAlertController(title: Localized(.WRD_RECOVER_PASSWORD_ALERT_HEADER), message: Localized(.WRD_RECOVER_PASSWORD_ALERT_MSG), preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: Localized(.WRD_ALERT_BUTTON_OK), style: .default) {
                       action in
                         self.dismiss(animated: true, completion: nil)
