@@ -44,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		692862A31DE0A60600649091 /* PrizyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizyViewController.swift; path = Helper/PrizyViewController.swift; sourceTree = "<group>"; };
-		69801AD11DAB9D5B00417291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/Localization/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		69801AD31DAB9D6000417291 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/Localization/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		699B9AD91DCAE27A004F876A /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainWrapper.h; path = Controllers/KeychainWrapper.h; sourceTree = "<group>"; };
 		699B9ADA1DCAE27A004F876A /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainWrapper.m; path = Controllers/KeychainWrapper.m; sourceTree = "<group>"; };
@@ -410,7 +409,6 @@
 		69801AD01DAB9D5B00417291 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				69801AD11DAB9D5B00417291 /* en */,
 				69801AD31DAB9D6000417291 /* ja */,
 			);
 			name = Localizable.strings;
